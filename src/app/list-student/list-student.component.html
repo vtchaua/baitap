@@ -1,0 +1,70 @@
+
+<div id = "body">    
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Sinh vien</li>
+            </ol>
+        </nav>
+        <div class="card">
+            <div class="card-header">
+                <i class='fas fa-table'></i> danh sach sinh vien
+            </div>
+            <div class="card-body">
+                <div class="input-group serch">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary"><i class='fas fa-search'></i></button>
+                    </div>
+                </div>
+                <table class="table table-bordered mytable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">EnrollDate</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let a of students'>
+                            <td>{{a.FirstMidName}}</td>
+                            <td>{{a.LastName}}</td>
+                            <td>{{a.EnrollmentDate}}</td>
+                            <td>
+                            <a [routerLink] = "['/detail-course',a.ID]" class="detail"><i class='fas fa-info-circle'></i></a>&nbsp;
+                            <i class='fas fa-trash-alt delete' data-toggle="modal" data-target="#myModal" (click) = 'thongtin(a.ID, a.FirstMidName, a.LastName)'>
+                            </i>
+                            </td>
+                        </tr>
+                        <div class="modal" tabindex="-1" role="dialog" id="myModal">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-body">
+                                    <p id = "thongbao"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" id="agree" (click) = 'Xoa()'>Agree</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </tbody>
+                </table>
+                <p class="show">Showing 1 of 3</p>
+                <nav aria-label="Page navigation example" class="myNav">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>    
+            </div>
+        </div>
+    </div>

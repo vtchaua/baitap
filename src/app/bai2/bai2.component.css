@@ -1,0 +1,9 @@
+.table 
+{
+    text-align: center;
+    border: 4px double;
+}
+.table th, table td
+{
+    border: 4px double;
+}

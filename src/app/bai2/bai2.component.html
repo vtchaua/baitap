@@ -1,0 +1,21 @@
+
+<table class="table ">
+  <thead>
+    <tr>
+      <th scope="col">Hình</th>
+      <th scope="col">Họ và Tên</th>
+      <th scope="col">Ngày sinh</th>
+      <th scope="col">Giới tính</th>
+      <th scope="col">Điểm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let a of student'>
+      <th scope="col"><img src="assets\{{a.photo}}" width="100px" class="ImgPersonal"></th>
+      <th scope="col">{{a.fullName}}</th>
+      <th scope="col">{{a.birthday}}</th>
+      <th scope="col">{{a.gender}}</th>
+      <th scope="col">{{a.mark}}</th>
+    </tr>
+  </tbody>
+</table>

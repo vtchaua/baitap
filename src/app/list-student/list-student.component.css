@@ -1,0 +1,10 @@
+.serch {
+    width: 20%;
+}
+.serch div button {
+    width: 100%;
+    background-color: blue;
+}
+.mytable {
+    margin: 1em 0 0 0;
+}

@@ -1,0 +1,27 @@
+.text
+{
+    text-align: center;
+
+}
+.left
+{
+    background-color: rgb(44, 40, 40);
+    color: #FFF;
+    height: 700px;
+}
+.col-lg-9
+{
+    margin-left: -1em;
+}
+.breadcrumb
+{
+    background-color: #FFF;
+}
+.card-body
+{
+    text-align: center;
+}
+.next
+{
+    float: right;
+}

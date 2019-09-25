@@ -1,0 +1,43 @@
+
+<div class="card">
+  <div class="card-header">
+    List Product
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-2">
+        <p class="card-text">Filter by: </p>
+      </div>
+      <div class="col-lg-2">
+        <input type="password" class="form-control" id="inputPassword">
+      </div>
+    </div>
+    <h3><b>Filtered by:</b></h3>
+    
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col"><button type="button" class="btn btn-primary"(click) = 'AnHien()'>Hien Image</button></th>              <th scope="col">Product</th>
+              <th scope="col">Code</th>
+              <th scope="col">Date</th>
+              <th scope="col">Available</th>
+              <th scope="col">Price</th>
+              <th scope="col">Amount</th>
+              <th scope="col">5 Star Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let a of listproduct'>
+              <td scope="col"><img src="assets\{{a.imageUrl}} " width="100px"
+               class="ImageProduct" *ngIf='isShow'></td>
+              <th scope="col"><a [routerLink] = "['/detail',a.productId]">{{a.productName}}</a></th>
+              <td scope="col">{{a.productCode}}</td>
+              <td scope="col">{{a.releaseDate}}</td>
+              <td scope="col">{{a.description}}</td>
+              <td scope="col">{{a.price}}</td>
+              <td scope="col">{{a.amount}}</td>
+              <td scope="col"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i></td>
+            </tr>
+          </tbody>
+        </table>
+</div>

@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]="['']">
+            Mục lục 
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" [routerLink] ="['/bai1']">Bai 1</a>
+          <a class="dropdown-item" [routerLink] ="['/bai2']">Bai 2</a>
+          <a class="dropdown-item" [routerLink] ="['/bai3']">Bai 3</a>
+          <a class="dropdown-item" [routerLink] ="['/list-product']">Phu luc demo</a>
+          <a class="dropdown-item" [routerLink] ="['/list-stusent']">danh sach sinh vien</a>
+        </div>
+      </div>
+     
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
